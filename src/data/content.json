@@ -1,0 +1,463 @@
+{
+  "navbar": {
+    "logo": {
+      "text": "Alghif Rz | Portfolio",
+      "highlight": "."
+    },
+    "menuItems": [
+      {
+        "name": "Home",
+        "href": "/#home"
+      },
+      {
+        "name": "Profile",
+        "href": "/#profile"
+      },
+      {
+        "name": "Experience",
+        "href": "/#experience"
+      },
+      {
+        "name": "Activities & Skills",
+        "href": "/#activities"
+      },
+      {
+        "name": "Projects",
+        "href": "/projects"
+      },
+      {
+        "name": "Contact",
+        "href": "/#contact"
+      }
+    ]
+  },
+  "hero": {
+    "title": {
+      "welcome": "Hello, I am",
+      "name": "Alghifari Rasyid Zola",
+      "highlight": "Computer Science"
+    },
+    "description": "I am an undergraduate student at Pertamina University majoring in Computer Science, with a GPA of 3.89 out of 4.00.",
+    "buttons": {
+      "cv": {
+        "text": "See More CV",
+        "link": "https://drive.google.com/file/d/1LpTuaJO6EQmKYMoECHug8cKYFAGWlbeo/view?usp=sharing"
+      },
+      "portfolio": {
+        "text": "See More Portfolio",
+        "link": "https://drive.google.com/file/d/15EIvQLAPNE0bDZDvihQ9cPxoHoVDjniT/view?usp=sharing"
+      }
+    },
+    "socialMedia": [
+      {
+        "platform": "LinkedIn",
+        "icon": "bx bxl-linkedin-square",
+        "link": "https://www.linkedin.com/in/alghifarirasyidzola"
+      },
+      {
+        "platform": "Github",
+        "icon": "bx bxl-github",
+        "link": "https://github.com/alghifrz"
+      },
+      {
+        "platform": "Instagram",
+        "icon": "bx bxl-instagram-alt",
+        "link": "https://www.instagram.com/agifrz"
+      }
+    ],
+    "email": {
+      "address": "alghifarirasyidzola@gmail.com",
+      "icon": "bx bx-envelope"
+    },
+    "whatsapp": {
+      "number": "6282172772394",
+      "icon": "bx bxl-whatsapp"
+    }
+  },
+  "marquee": {
+    "gap": "✷",
+    "content": [
+      "Software Engineer",
+      "Web Developer",
+      "Data Science",
+      "Machine Learning",
+      "Mobile Developer"
+    ]
+  },
+  "about": {
+    "about": "Profile",
+    "detail": "Strong interest in software development, machine learning, web development, and data science. Experienced in developing applications using Java Swing and PyQt5, as well as web development with HTML, CSS, JavaScript, TypeScript, and frameworks or libraries like Laravel, Next.js, React.js, and Tailwind. Additionally, actively engaged in student organizations and enjoy sharing knowledge as a tutor, which helps develop both technical and leadership skills."
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "A snapshot of my growth through hands-on experiences.",
+    "key": "Key Competencies",
+    "step": [
+      {
+        "title": "Risk Management Analyst Intern",
+        "company": "PT Pertamina (Persero)",
+        "date": "Feb 2025 - Mar 2025",
+        "description": [
+          "Collect risk data from Pertamina's subsidiaries, clean and manage it for visual analysis.",
+          "Design interactive dashboards using Power BI to monitor and analyze risks, integrating multiple data sources for a comprehensive risk profile.",
+          "Reports to support management decisions, and provide risk mitigation recommendations."
+        ],
+        "skill": ["Microsoft Power BI", "Microsoft Excel", "Relational Data Modelling", "Data Visualization", "Data Science"]
+      },
+      {
+        "title": "Data Structure and Algorithm Practicum Assistant",
+        "company": "Pertamina University",
+        "date": "Oct 2024 - Feb 2025",
+        "description": [
+          "Assisted lecturers in conducting practicum sessions focused on data structure concepts and algorithms using C++, such as linked lists, stacks, queues, etc.",
+          "Guided students through practicum assignments and provided feedback to improve their code quality.",
+          "Developed and tested practicum modules to ensure alignment with the course curriculum.",
+          "Evaluated students practicum results and provided constructive feedback to enhance their programming skills."
+        ],
+        "skill": ["C++ Programming", "Algorithms", "Data Structures"]
+      },
+      {
+        "title": "Software Desktop Developer",
+        "company": "SKK Migas & Pertamina University",
+        "date": "Aug 2024 - Jan 2025",
+        "description": [
+          "Implementing a responsive and intuitive graphical user interface (GUI) using PyQt5.",
+          "Developing a project management system with the .skk format, including automatic data saving and loading.",
+          "Creating a data visualization feature using pickle to store and load user-generated plots.",
+          "Designing and optimizing QTreeView as a project navigation system, initially hiding local drives.",
+          "Resolving issues related to MDI subwindows, including dynamically reloading widgets.",
+          "Ensuring efficient integration between the UI components, file management, and data storage."
+        ],
+        "skill": ["Python Programming", "PyQt", "Pickle", "Object-Oriented Programming (OOP)", "Data Structures", "Data Visualization", "Troubleshooting"]
+      },
+      {
+        "title": " Calculus Teaching Mentor ",
+        "company": "Pertamina University",
+        "date": " Apr 2024 - Aug 2024",
+        "description": [
+          "/calculus.png"
+        ],
+        "skill": ["Calculus", "Math", "Teaching"]
+      },
+      {
+        "title": "Samsung Innovation Campus Batch 5",
+        "company": "PT Samsung Electronics Indonesia",
+        "date": " Feb 2024 - Sep 2024",
+        "description": [
+          "Attended various sessions that provided insights into applying AI and ML to solve real-world problems, along with integrating IoT with smart devices.",
+          "Gained knowledge of machine learning concepts such as prediction models, classification, and deep learning algorithms, and how to apply them in data-driven projects.",
+          "Acquired skills in data processing and developing AI/ML models to create innovative solutions across different fields.",
+          "Gained hands-on experience in developing IoT, AI, and ML-based applications, and collaborated with other participants in team projects to tackle relevant technological challenges."
+        ],
+        "skill": ["Python Programming", "Jupyter Notebook", "Internet of Things (IoT)", "Artificial Intelligence (AI)", "Machine Learning"]
+      },
+      {
+        "title": "Basic Programming Practicum Assistant",
+        "company": "Pertamina University",
+        "date": "Sep 2023 - Aug 2024",
+        "description": [
+          "Assisted lecturers in conducting practicum sessions focused on fundamental programming concepts and algorithms using C++.",
+          "Guided students through practicum assignments, helping them improve their code quality.",
+          "Developed and tested practicum modules to ensure alignment with the curriculum.",
+          "Assessed students' practicum results and provided constructive feedback to enhance their programming skills."
+        ],
+        "skill": ["C++ Programming", "MinGW Toolchain", "Basic Programming Conscepts", "Computational Logic"]
+      }
+    ]
+  },
+  "activitiessession": {
+    "title": "Activities & Skills",
+    "subtitle": "A showcase of my involvement and technical expertise."
+  },
+  "activities": {
+    "title": "Activities & Organizations",
+    "detail": [
+      {
+        "name": "HMIK UP | Computer Science Student Association",
+        "role": "Head of Technology and Education Department",
+        "date": "Jan 2025 - Present"
+      },
+      {
+        "name": "CITE UP 2024 | Computer Science National Event & Competition",
+        "role": "Head of Competition Division",
+        "date": "Jan 2024 - Sep 2024"
+      },
+      {
+        "name": "MIF 3.0 | National Islamic Event & Competition",
+        "role": "Project Leader",
+        "date": "Oct 2023 - Mar 2024"
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "detail": [
+      {
+        "name": "Pertamina University",
+        "degree": "Undergraduate Computer Science, GPA 3.89/4.00",
+        "date": "Sep 2022 - Present",
+        "logo": "/LogoUPk.png"
+      },
+      {
+        "name": "SMAN Agam Cendekia",
+        "degree": "Math Science",
+        "date": "2019 - 2022",
+        "logo": "/LogoSMANAC.png"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "detail": [
+      { "name": "Python", "logo": "FaPython", "color": "#3776AB" },
+      { "name": "C++", "logo": "SiCplusplus", "color": "#00599C" },
+      { "name": "Java", "logo": "FaJava", "color": "#007396" },
+      { "name": "PHP", "logo": "FaPhp", "color": "#777BB4" },
+      { "name": "JavaScript", "logo": "SiJavascript", "color": "#F7DF1E" },
+      { "name": "TypeScript", "logo": "SiTypescript", "color": "#3178C6" },
+      { "name": "TailwindCSS", "logo": "SiTailwindcss", "color": "#06B6D4" },
+      { "name": "Dart", "logo": "SiDart", "color": "#0175C2" },
+      { "name": "Next.js", "logo": "SiNextdotjs", "color": "#FFFFFF" },
+      { "name": "Laravel", "logo": "SiLaravel", "color": "#FF2D20" },
+      { "name": "React.js", "logo": "FaReact", "color": "#61DAFB" },
+      { "name": "Node.js", "logo": "FaNodeJs", "color": "#339933" },
+      { "name": "Flutter", "logo": "SiFlutter", "color": "#02569B" },
+      { "name": "MySQL", "logo": "SiMysql", "color": "#4479A1" },
+      { "name": "SQLite", "logo": "SiSqlite", "color": "#003B57" },
+      { "name": "MongoDB", "logo": "SiMongodb", "color": "#47A248" },
+      { "name": "Firebase", "logo": "SiFirebase", "color": "#FFCA28" },
+      { "name": "REST API", "logo": "SiPostman", "color": "#FF6C37" },
+      { "name": "Git", "logo": "FaGitAlt", "color": "#F05032" },
+      { "name": "GitHub", "logo": "FaGithub", "color": "#FFFFFF" },
+      { "name": "Tableau", "logo": "SiTableau", "color": "#E97627" },
+      { "name": "Figma", "logo": "FaFigma", "color": "#F24E1E" },
+      { "name": "Photoshop", "logo": "SiAdobephotoshop", "color": "#31A8FF" },
+      { "name": "Premiere Pro", "logo": "SiAdobepremierepro", "color": "#9999FF" }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications",
+    "detail": [
+      {
+        "name": "Basic Python (Gold)",
+        "logo": "https://api.badgr.io/public/badges/_iub8SRfTnOye29DymPA6A/image",
+        "issuer": "Skilvul",
+        "date": "2024", 
+        "link": "https://badgr.com/public/assertions/Ewk4cF38TDC57eJ_XGW8EA?identity__email=alghifarirasyidzola@gmail.com"
+      },
+      {
+        "name": "Advance Python (Gold)",
+        "logo": "https://api.badgr.io/public/badges/n9ox20fxRcucNyT53jonvA/image",
+        "issuer": "Skilvul",
+        "date": "2024", 
+        "link": "https://badgr.com/public/assertions/yprQd7TxQpi47jCHANDlWw?identity__email=alghifarirasyidzola@gmail.com"
+      },
+      {
+        "name": "Algorithm & Data Structures with Python (Gold)",
+        "logo": "https://api.badgr.io/public/badges/jx_ZlqL2RGyGMBkh00mp8g/image",
+        "issuer": "Skilvul",
+        "date": "2024", 
+        "link": "https://badgr.com/public/assertions/n3ey6N04Rmel08iV2M7ttg?identity__email=alghifarirasyidzola@gmail.com"
+      },
+      {
+        "name": "Internet of Things (IoT) - Fundamentals (Gold)",
+        "logo": "https://api.badgr.io/public/badges/Kgwq-ztlQFal8gJSitYuuA/image",
+        "issuer": "Skilvul",
+        "date": "2024", 
+        "link": "https://badgr.com/public/assertions/9r9o6_H-QdqaUJCFPHP9hQ?identity__email=alghifarirasyidzola@gmail.com"
+      },
+      {
+        "name": "IoT Development with ESP32 (Gold)",
+        "logo": "https://api.badgr.io/public/badges/PRZrKUh7Q2SlWGjJDOogrw/image",
+        "issuer": "Skilvul",
+        "date": "2024", 
+        "link": "https://badgr.com/public/assertions/bi-FYj07T42kvzjkl2clDA?identity__email=alghifarirasyidzola@gmail.com"
+      },
+      {
+        "name": "Internet of Things (IoT) Project - Building Health Monitoring System (Gold)",
+        "logo": "https://api.badgr.io/public/badges/BJKo4NjuTDuam1sH_Z4H9w/image",
+        "issuer": "Skilvul",
+        "date": "2024", 
+        "link": "https://badgr.com/public/assertions/_rsTo4glR1CiUK91IfyZQQ?identity__email=alghifarirasyidzola@gmail.com"
+      },
+      {
+        "name": "Internet of Things (IoT) - Software and Platforms (Gold)",
+        "logo": "https://api.badgr.io/public/badges/MbKyqQyyRo2NKPpZWbarFg/image",
+        "issuer": "Skilvul",
+        "date": "2024", 
+        "link": "https://badgr.com/public/assertions/YHfeMdb7R1ysVA7GKVyT_w?identity__email=alghifarirasyidzola@gmail.com"
+      },
+      {
+        "name": "Internet of Things (IoT) - Software and Platforms (Gold)",
+        "logo": "https://api.badgr.io/public/badges/EVCJxczyT8GzxfFEEoraag/image",
+        "issuer": "Skilvul",
+        "date": "2024", 
+        "link": "https://badgr.com/public/assertions/WCecajodS_2Kz31U1tDcGA?identity__email=alghifarirasyidzola@gmail.com"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A showcase of my best work and technical expertise",
+    "featured": [
+      {
+        "title": "CompSci QuizApp",
+        "description": "A fullstack web-based quiz platform designed to help users test and improve their knowledge of computer science topics. It features a clean, responsive interface and supports interactive, multiple-choice quizzes.",
+        "image": "compsci.png",
+        "technologies": ["TypeScript", "JavaScript", "Next.js", "React.js", "TailwindCSS", "PostgreSQL", "Prisma ORM", "Google OAuth", "Vercel"],
+        "github": "https://github.com/alghifrz/CompSci-QuizApp",
+        "demo": "https://comp-sci-quiz-app.vercel.app/",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "CompSci"
+      },
+      {
+        "title": "Alghif Rz | Portfolio",
+        "description": "A professional portfolio website",
+        "image": "portfolio.png",
+        "technologies": ["TypeScript", "JavaScript", "Next.js", "React.js", "TailwindCSS", "FramerMotion"],
+        "github": "https://github.com/alghifrz/Portfolio",
+        "demo": "",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "Portfolio"
+      },
+      {
+        "title": "UPartner Web",
+        "description": "A full-stack website that connects lecturers and students for project collaboration, handling the entire development process from requirements gathering and system design to implementation and testing.",
+        "image": "upartner.png",
+        "technologies": ["Laravel", "JavaScript", "TailwindCSS", "MySQL", "PHP", "Blade", "CSS", "Figma", "Draw.io"],
+        "github": "https://github.com/alghifrz/UPartner-WEB",
+        "demo": "",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "UPartner"
+      },
+      {
+        "title": "DigitalExposome - Mental Wellbeing Classification",
+        "description": "Predicting a person's mental wellbeing level based on air quality data and their physiological signal collected from wearable devices.",
+        "image": "menta.png",
+        "technologies": ["Jupyter Notebook", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
+        "github": "https://github.com/alghifrz/DigitalExposome-Classification",
+        "demo": "",
+        "cat": "Machine Learning",
+        "featured": true,
+        "preview": "Digital"
+      },
+      {
+        "title": "Productivity Mobile App",
+        "description": "A simple and beautifully designed productivity application built using Flutter, designed to help users manage daily tasks efficiently.",
+        "image": "productivity.png",
+        "technologies": ["Dart", "Flutter", "Java", "C++", "CMake", "C"],
+        "github": "https://github.com/alghifrz/Productivity-App",
+        "demo": "",
+        "cat": "Mobile Development",
+        "featured": true,
+        "preview": "Productivity"
+      },
+      {
+        "title": "GoGrow - Program List",
+        "description": "A React-based web app that displays programs or events in a responsive card layout, with each card showing the title, description, date, and location. It uses modular components like `CardProgram` and `ListProgram` for clean and maintainable code.",
+        "image": "gogrowprogram.png",
+        "technologies": ["JavaScript", "React.js", "Vite", "TailwindCSS", "React Router DOM", "JSON Server", "ESLint"],
+        "github": "https://github.com/alghifrz/GoGrow-program-list-react",
+        "demo": "",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "Program"
+      },
+      {
+        "title": "GoGrow - ToDo App",
+        "description": "A simple Todo application built with React and Vite that allows users to manage their daily task list through a lightweight and responsive interface.",
+        "image": "todoreact.png",
+        "technologies": ["JavaScript", "React.js", "Vite", "ESLint", "CSS", "JSON Server"],
+        "github": "https://github.com/alghifrz/GoGrow-todo-app",
+        "demo": "",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "Todo"
+      },
+      {
+        "title": "Speech Accent Analysis using MFCC",
+        "description": "Analyzed the speech accents of Universitas Pertamina students from various regions in Indonesia using the Mel Frequency Cepstral Coefficients (MFCC) technique.",
+        "image": "speech.png",
+        "technologies": ["Jupyter Notebook", "Python", "Pydub", "Librosa"],
+        "github": "https://github.com/alghifrz/SpeechAccent-MFCC",
+        "demo": "",
+        "cat": "Data Science",
+        "featured": true,
+        "preview": "Speech"
+      },
+      {
+        "title": "Anemic Classification",
+        "description": "This project uses traditional machine learning (Random Forest Classifier) to classify blood smear images into two categories: Anemic and Non-Anemic. The model is trained on image data that has been resized, flattened, and standardized.",
+        "image": "anemic.png",
+        "technologies": ["Jupyter Notebook", "Python", "Scikit-learn", "Pandas", "Matplotlib", "Seaborn", "Random Forest Classifier"],
+        "github": "https://github.com/alghifrz/Anemic-Classification",
+        "demo": "",
+        "cat": "Machine Learning",
+        "featured": true,
+        "preview": "Anemic"
+      },
+      {
+        "title": "Dashboard Subsidiary Risk Management Pertamina",
+        "description": "This dashboard helps PT Pertamina monitor risks systematically, enhance transparency, and make data-driven decisions to prevent losses and ensure business continuity.",
+        "image": "bi.png",
+        "technologies": ["Power BI", "Microsoft Excel", "Relational Data Modelling", "Data Visualization", "Data Science", "Data Analysis", "DAX", "Power Query"],
+        "github": "",
+        "demo": "",
+        "cat": "Data Analysis",
+        "featured": true,
+        "preview": "Bi"
+      },
+      {
+        "title": "Money Management System",
+        "description": "Money Management CSDev is a Laravel-based web application designed to help users manage their personal finances. It allows users to record income and expenses, and provides an intuitive interface to monitor their financial status in real time.",
+        "image": "moneymanagement.png",
+        "technologies": ["Laravel", "JavaScript", "TailwindCSS", "MySQL", "PHP", "Blade"],
+        "github": "https://github.com/alghifrz/money-management-csdev",
+        "demo": "",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "Money"
+      },
+      {
+        "title": "Scheduling System",
+        "description": "This project is a web-based scheduling system where users can log in, add their activities, and view them on a timeline-style calendar. Users can also see other users' schedules, distinguished by different color indicators.",
+        "image": "uas.png",
+        "technologies": ["Laravel", "JavaScript", "TailwindCSS", "MySQL", "PHP", "Blade"],
+        "github": "https://github.com/alghifrz/money-management-csdev",
+        "demo": "",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "Schedule"
+      },
+      {
+        "title": "Real Madrid static Blog",
+        "description": "RealMadrid-BLOG is a front-end blog website dedicated to Real Madrid fans. It features a clean, responsive interface where users can view blog posts and explore football-related content.",
+        "image": "realmadrid.png",
+        "technologies": ["Laravel", "JavaScript", "TailwindCSS", "PHP", "Blade"],
+        "github": "https://github.com/alghifrz/RealMadrid-BLOG",
+        "demo": "",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "RMBlog"
+      },
+      {
+        "title": "Field and Well Production Benchmarking",
+        "description": "The Field and Well Production Benchmarking application helps the oil and gas industry optimize production and efficiency through data integration, performance analysis, and intuitive visualization for better decision-making.",
+        "image": "skk.png",
+        "technologies": ["Python", "PyQt", "Jupyter Notebook", "Pickle", "JSON", "Data Visualization", "Data Science", "Data Analysis"],
+        "github": "",
+        "demo": "",
+        "cat": "Software Development",
+        "featured": true,
+        "preview": "SKK"
+      }
+    ]
+  },
+  "meta": {
+    "title": "Alghif Rz | Portfolio",
+    "description": "Personal portfolio of a passionate web developer."
+  }
+}
