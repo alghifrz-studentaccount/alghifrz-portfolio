@@ -328,7 +328,7 @@
         "image": "portfolio.png",
         "technologies": ["TypeScript", "JavaScript", "Next.js", "React.js", "TailwindCSS", "FramerMotion"],
         "github": "https://github.com/alghifrz/Portfolio",
-        "demo": "",
+        "demo": "https://alghifrz.me",
         "cat": "Web Development",
         "featured": true,
         "preview": "Portfolio"
