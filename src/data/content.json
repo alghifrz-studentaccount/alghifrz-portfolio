@@ -301,6 +301,17 @@
     "subtitle": "A showcase of my best work and technical expertise",
     "featured": [
       {
+        "title": "Terra Furniture Lab",
+        "description": "Terra Furniture Lab is a modern e-commerce web application built with Next.js and TypeScript, designed to showcase and sell a wide range of furniture products. It features a shopping cart, a seamless checkout process, and an admin panel for managing products, orders, and users. With Prisma ORM, a responsive UI, and optimized performance, the platform delivers a fast, intuitive, and efficient user experience.",
+        "image": "furniture.png",
+        "technologies": ["TypeScript", "JavaScript", "Next.js", "React.js", "TailwindCSS", "PostgreSQL", "Prisma ORM", "Google OAuth", "Vercel", "Neon", "Cloudinary", "ESLint"],
+        "github": "https://github.com/alghifrz/terra-furniture-lab",
+        "demo": "https://www.terrafurniturelab.shop/",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "Furniture"
+      },
+      {
         "title": "CompSci QuizApp",
         "description": "A fullstack web-based quiz platform designed to help users test and improve their knowledge of computer science topics. It features a clean, responsive interface and supports interactive, multiple-choice quizzes.",
         "image": "compsci.png",
