@@ -301,6 +301,17 @@
     "subtitle": "A showcase of my best work and technical expertise",
     "featured": [
       {
+        "title": "Dashboard Trash Management",
+        "description": "This dashboard presents waste monitoring data over the past three years across the provinces of West Java, Central Java, and East Java, offering insights into regional waste trends and management performance.",
+        "image": "sampah.png",
+        "technologies": ["Power BI", "Microsoft Excel", "Relational Data Modelling", "Data Visualization", "Data Science", "Data Analysis", "DAX", "Power Query"],
+        "github": "",
+        "demo": "",
+        "cat": "Data Analysis",
+        "featured": true,
+        "preview": "Sampah"
+      },
+      {
         "title": "MFCC - Speech Accent Classification",
         "description": "A deep learning-based web application for predicting regional Indonesian accents and dialects.Utilizing a CNN-LSTM hybrid model, the system analyzes speech inputs to detect linguistic patterns from regions such as Java, Sunda, and Batak. With a user-friendly interface, it supports linguistic research, education, and cultural preservation.",
         "image": "mfcc.png",
