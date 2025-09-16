@@ -55,7 +55,7 @@ export default function Footer() {
                 whileHover={{ x: 5 }}
               >
                 <FaWhatsapp className="mr-3 text-blue-400/80" />
-                {whatsapp.number}
+                {whatsapp.numberShow}
               </motion.a>
             </div>
           </motion.div>
