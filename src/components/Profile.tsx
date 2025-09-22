@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Profile = () => {
-  const photos = Array.from({ length: 16 }, (_, i) => `/me${i + 1}.jpg`);
+  const photos = Array.from({ length: 15 }, (_, i) => `/me${i + 1}.jpg`);
   const [current, setCurrent] = useState(0);
 
   const nextPhoto = useCallback(() => {
