@@ -302,6 +302,50 @@
     "subtitle": "A showcase of my best work and technical expertise",
     "featured": [
       {
+        "title": "Dashboard Escalation Case Complaint",
+        "description": "A complaint escalation dashboard that provides real-time visibility into cases requiring follow-up from relevant stakeholders. The system consolidates data from multiple sources, categorizes complaint severity, and tracks each case’s escalation path from initial submission to stakeholder assignment and resolution status. The dashboard ensures that high-priority issues are highlighted immediately, enabling faster coordination, timely action, and improved accountability across departments. This solution helps stakeholders monitor their responsibilities more efficiently and supports a more structured and responsive complaint-handling process.",
+        "image": "compliant.png",
+        "technologies": ["Looker Studio", "Google Sheets", "Relational Data Modelling", "DAX", "Power Query", "Data Science", "Data Visualization"],
+        "github": "",
+        "demo": "",
+        "cat": "Data Analysis",
+        "featured": true,
+        "preview": "escalation"
+      },
+      {
+        "title": "Dashboard Performance Monitoring",
+        "description": "A real-time dashboard for monitoring agent performance, integrating data from multiple sources such as Qiscus, MForm, and internal systems. The dashboard provides live visibility into key metrics, including incoming conversation volume, agent productivity, response time SLA, resolution rate, enabling the operations team to make faster, data-driven decisions. The system is designed to be accurate, easy to use, and scalable, supporting overall improvements in efficiency and service quality.",
+        "image": "agentper.png",
+        "technologies": ["Power BI", "Google Sheets", "Relational Data Modelling", "DAX", "Power Query", "Data Science", "Data Visualization"],
+        "github": "",
+        "demo": "",
+        "cat": "Data Analysis",
+        "featured": true,
+        "preview": "agentper"
+      },
+      {
+        "title": "Customer Care Paragon Profile & Knowledge Management System",
+        "description": "A Customer Care website designed as a centralized platform for knowledge management, service information, and team profiling. The website replaces the previously unstructured Google Sites environment by offering a more organized, maintainable, and user-friendly system. It provides updated guidelines, SOPs, FAQs, and internal resources, ensuring that Customer Care teams can access accurate information quickly. In addition, the site supports branding and transparency by showcasing team roles, achievements, and initiatives, ultimately improving operational efficiency and strengthening Customer Care’s professional image.",
+        "image": "ccweb.png",
+        "technologies": ["TypeScript", "JavaScript", "Next.js", "React.js", "TailwindCSS", "PostgreSQL", "Prisma ORM", "Google OAuth", "Vercel", "ESLint", "Supabase"],
+        "github": "https://github.com/ccparagoncorp/customercare-web",
+        "demo": "",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "ccweb"
+      },
+      {
+        "title": "Desa Wisata Alamendeah Website",
+        "description": "Developed an informational and promotional website for Desa Wisata Alamedah to enhance its online presence and support tourism. The platform provides detailed information about tourist attractions, local culture, accommodations, and events, designed to improve visitor engagement and accessibility. Built with modern web technologies ensuring responsive design and user-friendly navigation.",
+        "image": "dawala.png",
+        "technologies": ["TypeScript", "JavaScript", "Next.js", "React.js", "TailwindCSS", "PostgreSQL", "Prisma ORM", "Google OAuth", "Vercel", "ESLint", "Supabase"],
+        "github": "https://github.com/dawaladev/dawala-app-guest",
+        "demo": "https://www.wisataalamendah.com/",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "dawala"
+      },
+      {
         "title": "Dashboard Trash Management",
         "description": "This dashboard presents waste monitoring data over the past three years across the provinces of West Java, Central Java, and East Java, offering insights into regional waste trends and management performance.",
         "image": "sampah.png",
