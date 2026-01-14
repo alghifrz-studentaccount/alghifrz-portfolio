@@ -78,16 +78,16 @@
   "marquee": {
     "gap": "✷",
     "content": [
+      "AI Enthusiast",
       "Software Engineer",
       "Web Developer",
       "Data Science",
-      "Machine Learning",
-      "Mobile Developer"
+      "Machine Learning"
     ]
   },
   "about": {
     "about": "Profile",
-    "detail": "Strong interest in software development, machine learning, web development, and data science. Experienced in developing applications using Java Swing and PyQt5, as well as web development with HTML, CSS, JavaScript, TypeScript, and frameworks or libraries like Laravel, Next.js, React.js, and Tailwind. Additionally, actively engaged in student organizations and enjoy sharing knowledge as a tutor, which helps develop both technical and leadership skills."
+    "detail": "Computer Science undergraduate at Pertamina University (GPA 3.91/4.00) with strong interests in automation, software engineering, and data science. Experienced in developing AI-driven conversational automation platforms, integrating workflow automation, centralized databases, and communication channels like WhatsApp. Skilled in Python, web development (HTML, CSS, JS/TS, Laravel, Next.js, React.js, Tailwind), and data visualization with Power BI. Actively engaged in student organizations and tutoring, developing both technical and leadership skills."
   },
   "experience": {
     "title": "Experience",
