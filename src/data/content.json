@@ -221,23 +221,23 @@
       { "name": "JavaScript", "logo": "SiJavascript", "color": "#F7DF1E" },
       { "name": "TypeScript", "logo": "SiTypescript", "color": "#3178C6" },
       { "name": "TailwindCSS", "logo": "SiTailwindcss", "color": "#06B6D4" },
-      { "name": "Dart", "logo": "SiDart", "color": "#0175C2" },
       { "name": "Next.js", "logo": "SiNextdotjs", "color": "#FFFFFF" },
       { "name": "Laravel", "logo": "SiLaravel", "color": "#FF2D20" },
       { "name": "React.js", "logo": "FaReact", "color": "#61DAFB" },
       { "name": "Node.js", "logo": "FaNodeJs", "color": "#339933" },
-      { "name": "Flutter", "logo": "SiFlutter", "color": "#02569B" },
       { "name": "MySQL", "logo": "SiMysql", "color": "#4479A1" },
-      { "name": "SQLite", "logo": "SiSqlite", "color": "#003B57" },
+      { "name": "PostgreSQL", "logo": "SiPostgresql", "color": "#336791" },
       { "name": "MongoDB", "logo": "SiMongodb", "color": "#47A248" },
-      { "name": "Firebase", "logo": "SiFirebase", "color": "#FFCA28" },
-      { "name": "REST API", "logo": "SiPostman", "color": "#FF6C37" },
       { "name": "Git", "logo": "FaGitAlt", "color": "#F05032" },
       { "name": "GitHub", "logo": "FaGithub", "color": "#FFFFFF" },
       { "name": "Tableau", "logo": "SiTableau", "color": "#E97627" },
       { "name": "Figma", "logo": "FaFigma", "color": "#F24E1E" },
-      { "name": "Photoshop", "logo": "SiAdobephotoshop", "color": "#31A8FF" },
-      { "name": "Premiere Pro", "logo": "SiAdobepremierepro", "color": "#9999FF" }
+      { "name": "N8N", "logo": "SiN8N", "color": "#ff2265" },
+      { "name": "Docker", "logo": "SiDocker", "color": "#2496ED" },
+      { "name": "Jira", "logo": "SiJira", "color": "#0052CC" },
+      { "name": "Anaconda", "logo": "SiAnaconda", "color": "#44A833" },
+      { "name" : "Tensorflow", "logo": "SiTensorflow", "color": "#FF6F00" },
+      { "name": "Looker", "logo": "SiLooker", "color": "#4285F4" }
     ]
   },
   "certifications": {
@@ -305,6 +305,39 @@
     "title": "Featured Projects",
     "subtitle": "A showcase of my best work and technical expertise",
     "featured": [
+      {
+        "title": "Kasiko Coffee Official Website",
+        "description": "Developed an informational and promotional website for Kasiko Coffee to enhance its online presence and support sales. The platform provides detailed information about menu, reservations, and company story, designed to improve customer engagement and accessibility. Built with modern web technologies ensuring responsive design and user-friendly navigation.",
+        "image": "kasiko.png",
+        "technologies": ["TypeScript", "JavaScript", "Next.js", "React.js", "TailwindCSS"],
+        "github": "https://github.com/kasikocoffeeatery/adminKasiko",
+        "demo": "http://kasikocoffee.com/",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "kasiko"
+      },
+      {
+        "title": "DIUK Solution - AI-Orchestrated Conversational Automation Platform",
+        "description": "an AI-driven conversational automation platform with an event-based architecture, enabling users to upload business data and define custom AI prompts. The system integrates workflow automation (n8n), centralized data storage, and WhatsApp communication channels to support end-to-end business processes such as broadcasting, transactions, and customer service.",
+        "image": "diuk.png",
+        "technologies": ["Next.js", "PostgreSQL", "TypeScript", "TailwindCSS", "React.js", "Prisma ORM", "n8n", "Natural Language Processing (NLP)", "WAHA", "LLM"],
+        "github": "",
+        "demo": "https://www.diuksolution.com/",
+        "cat": "Artificial Intelligence",
+        "featured": true,
+        "preview": "diuk"
+      },
+      {
+        "title": "Crystallure Chatbot Assistant",
+        "description": "A Retrieval-Augmented Generation (RAG)-based chatbot assistant designed to assist human agents **by providing quick access to product knowledge, enabling them to retrieve accurate information about products, policies, and procedures in order to respond to customer inquiries more efficiently and consistently.",
+        "image": "crys.png",
+        "technologies": ["Python", "LLM Embeddings", "Pinecone", "TypeScript", "Next.js", "Groq", "React.js"],
+        "github": "https://github.com/alghifrz/crystallure_chatbot",
+        "demo": "",
+        "cat": "Artificial Intelligence",
+        "featured": true,
+        "preview": "crysRAG"
+      },      
       {
         "title": "Dashboard Escalation Case Complaint",
         "description": "A complaint escalation dashboard that provides real-time visibility into cases requiring follow-up from relevant stakeholders. The system consolidates data from multiple sources, categorizes complaint severity, and tracks each case’s escalation path from initial submission to stakeholder assignment and resolution status. The dashboard ensures that high-priority issues are highlighted immediately, enabling faster coordination, timely action, and improved accountability across departments. This solution helps stakeholders monitor their responsibilities more efficiently and supports a more structured and responsive complaint-handling process.",

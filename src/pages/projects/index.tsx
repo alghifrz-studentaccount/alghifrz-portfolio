@@ -9,6 +9,7 @@ import {
   FaCode, 
   FaDatabase, 
   FaRobot, 
+  FaBrain,
   FaMobile, 
   FaGamepad, 
   FaTools,
@@ -56,11 +57,12 @@ const Projects = () => {
     'All': FaAllergies,
     'Web Development': FaCode,
     'Data Science': FaDatabase,
-    'Machine Learning': FaRobot,
+    'Machine Learning': FaBrain,
     'Mobile Development': FaMobile,
     'Game Development': FaGamepad,
     'DevOps': FaTools,
     'UI/UX Design': FaLayerGroup,
+    'Artificial Intelligence': FaRobot,
   };
 
   // Filter projects based on selected category

@@ -19,8 +19,17 @@ import {
   SiPostman,
   SiTableau,
   SiAdobephotoshop,
-  SiAdobepremierepro
+  SiAdobepremierepro,
+  SiN8N,
+  SiPostgresql,
+  SiDocker,
+  SiJira,
+  SiAnaconda,
+  SiTensorflow,
+  SiLooker,
+  SiPowers
 } from 'react-icons/si';
+
 import { IconType } from 'react-icons';
 import { motion } from 'framer-motion';
 
@@ -57,7 +66,15 @@ export default function Activities() {
     SiTableau,
     SiAdobephotoshop,
     SiAdobepremierepro,
-    SiCplusplus
+    SiCplusplus,
+    SiN8N,
+    SiPostgresql,
+    SiDocker,
+    SiJira,
+    SiAnaconda,
+    SiTensorflow,
+    SiLooker,
+    SiPowers
   };
 
   const technicalSkills: Skill[] = techStack.skills.detail
