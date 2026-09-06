@@ -34,7 +34,7 @@ const Hero = () => {
                                 {hero.title.name}
                             </motion.p>
                             <motion.p 
-                                className="text-2xl md:text-3xl text-black font-bold mt-1"
+                                className="text-sm md:text-xl text-black font-bold mt-1"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.6 }}

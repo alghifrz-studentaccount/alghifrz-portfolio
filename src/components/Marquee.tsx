@@ -9,7 +9,7 @@ const MarqueeSection = () => {
                     {content.marquee.content.map((item, index) => (
                     <span key={index} className="text-white font-bold text-sm md:text-xl">
                         {item}
-                        <span className="md:mx-40 mx-20 text-blue-400">{content.marquee.gap}</span>
+                        <span className="md:mx-60 mx-20 text-blue-400">{content.marquee.gap}</span>
                     </span>
                     ))}
                 </Marquee>

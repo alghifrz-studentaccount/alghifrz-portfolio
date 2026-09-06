@@ -35,9 +35,9 @@
     "title": {
       "welcome": "Hello, I am",
       "name": "Alghifari Rasyid Zola",
-      "highlight": "Computer Science"
+      "highlight": "AI & Automation Engineer | Software Engineer"
     },
-    "description": "I am an undergraduate student at Pertamina University majoring in Computer Science, with a GPA of 3.91 out of 4.00.",
+    "description": "Bachelor degree in Computer Science, with a GPA of 3.92 out of 4.00.",
     "buttons": {
       "cv": {
         "text": "See More CV",
@@ -78,22 +78,32 @@
   "marquee": {
     "gap": "✷",
     "content": [
-      "AI Enthusiast",
+      "AI Engineer",
       "Software Engineer",
-      "Web Developer",
-      "Data Science",
-      "Machine Learning"
+      "AI Automation Engineer"
     ]
   },
   "about": {
     "about": "Profile",
-    "detail": "Computer Science undergraduate at Pertamina University (GPA 3.91/4.00) with strong interests in automation, software engineering, and data science. Experienced in developing AI-driven conversational automation platforms, integrating workflow automation, centralized databases, and communication channels like WhatsApp. Skilled in Python, web development (HTML, CSS, JS/TS, Laravel, Next.js, React.js, Tailwind), and data visualization with Power BI. Actively engaged in student organizations and tutoring, developing both technical and leadership skills."
+    "detail": "Bachelor's degree in Computer Science at Pertamina University (GPA 3.92/4.00) with strong interests in AI Engineering, Automation, and Software Engineering. Experienced in building AI-driven applications and conversational automation systems, integrating LLMs, RAG, workflow automation, databases, and communication channels. Skilled in Python, machine learning, LLM-based applications, and modern web development with TypeScript/JavaScript, Next.js, and React.js. Experienced in developing end-to-end AI solutions from data processing and model development to deployment."
   },
   "experience": {
     "title": "Experience",
     "subtitle": "A snapshot of my growth through hands-on experiences.",
     "key": "Key Competencies",
     "step": [
+      {
+        "title": "Full Stack Web Developer ",
+        "company": "Pertamina University",
+        "date": "Feb 2026 - Present",
+        "description": [
+          "Developed responsive and user-friendly web interfaces based on UI/UX designs using ReactJS.",
+          "Integrated RESTful APIs and built reusable frontend components for dynamic application features.",
+          "Contributed to backend development using Golang, including API development and integration with frontend services.",
+          "Collaborated with developers, designers, and stakeholders throughout the development lifecycle."
+        ],
+        "skill": ["React.js", "JavaScript", "TypeScript", "TailwindCSS", "Next.js", "Golang", "RESTful API Development", "Frontend Development", "Backend Development"]
+      },
       {
         "title": "Tech Project Support Intern",
         "company": "PT Paragon Corp",
@@ -145,23 +155,11 @@
         "skill": ["Python Programming", "PyQt", "Pickle", "Object-Oriented Programming (OOP)", "Data Structures", "Data Visualization", "Troubleshooting"]
       },
       {
-        "title": "Samsung Innovation Campus Batch 5",
-        "company": "PT Samsung Electronics Indonesia",
-        "date": " Feb 2024 - Sep 2024",
-        "description": [
-          "Attended various sessions that provided insights into applying AI and ML to solve real-world problems, along with integrating IoT with smart devices.",
-          "Gained knowledge of machine learning concepts such as prediction models, classification, and deep learning algorithms, and how to apply them in data-driven projects.",
-          "Acquired skills in data processing and developing AI/ML models to create innovative solutions across different fields.",
-          "Gained hands-on experience in developing IoT, AI, and ML-based applications, and collaborated with other participants in team projects to tackle relevant technological challenges."
-        ],
-        "skill": ["Python Programming", "Jupyter Notebook", "Internet of Things (IoT)", "Artificial Intelligence (AI)", "Machine Learning"]
-      },
-      {
-        "title": "Basic Programming Practicum Assistant",
+        "title": "Programming, Data Structure and Algorithm Mentor",
         "company": "Pertamina University",
-        "date": "Sep 2023 - Aug 2024",
+        "date": "Sep 2023 - Feb 2025",
         "description": [
-          "Assisted lecturers in conducting practicum sessions focused on fundamental programming concepts and algorithms using C++.",
+          "Assisted lecturers in conducting practicum sessions focused on fundamental programming concepts, algorithms using C++, data structure concepts, etc.",
           "Guided students through practicum assignments, helping them improve their code quality.",
           "Developed and tested practicum modules to ensure alignment with the curriculum.",
           "Assessed students' practicum results and provided constructive feedback to enhance their programming skills."
@@ -306,6 +304,28 @@
     "subtitle": "A showcase of my best work and technical expertise",
     "featured": [
       {
+        "title": "RAISE UP - Automated Community Portal",
+        "description": "A digital platform for public association where n8n powers an AI WhatsApp chatbot. Answering resident questions, auto-classifying complaints, and sending reminders/broadcasts. Backed by a Next.js + Prisma + Supabase admin and data layer.",
+        "image": "raiseup.png",
+        "technologies": ["Fullstack Development", "Next.js", "TypeScript", "TailwindCSS", "React.js", "Prisma ORM", "Supabase", "n8n", "WhatsApp API", "LLM"],
+        "github": "https://github.com/alghifrz/raise-up-AI-smart-management-",
+        "demo": "https://www.lebakasri.space/ ",
+        "cat": "Artificial Intelligence",
+        "featured": true,
+        "preview": "raiseup"
+      },
+      {
+        "title": "Choptima - Machine Learning-Based Oil Well Production Optimization",
+        "description": "Developed an end-to-end machine learning platform for oil and water production prediction using XGBoost, with SciPy-based choke optimization and support for 10 ML algorithms, model evaluation, visualization, and deployment.",
+        "image": "choptima.png",
+        "technologies": ["Python", "PyFlask", "XGBoost", "Scikit-learn", "PostgreSQL"],
+        "github": "https://github.com/alghifrz/choptima",
+        "demo": "",
+        "cat": "Artificial Intelligence",
+        "featured": true,
+        "preview": "choptima"
+      },
+      {
         "title": "Kasiko Coffee Official Website",
         "description": "Developed an informational and promotional website for Kasiko Coffee to enhance its online presence and support sales. The platform provides detailed information about menu, reservations, and company story, designed to improve customer engagement and accessibility. Built with modern web technologies ensuring responsive design and user-friendly navigation.",
         "image": "kasiko.png",
@@ -313,7 +333,7 @@
         "github": "https://github.com/kasikocoffeeatery/adminKasiko",
         "demo": "http://kasikocoffee.com/",
         "cat": "Web Development",
-        "featured": true,
+        "featured": false,
         "preview": "kasiko"
       },
       {
@@ -372,6 +392,17 @@
         "preview": "ccweb"
       },
       {
+        "title": "Haibanana",
+        "description": "Developed a company profile website for Haibanana, a fresh banana supplier based in Jombang, East Java. Built a responsive Next.js landing page covering brand story, product grades, harvest-to-distribution process, partnership opportunities, and inquiry/WhatsApp order flows, with SEO metadata, Open Graph, sitemap, and structured data for local search visibility.",
+        "image": "haibanana.png",
+        "technologies": ["TypeScript", "JavaScript", "Next.js", "React.js", "TailwindCSS", "Vercel", "ESLint", "Supabase"],
+        "github": "https://github.com/alghifrz/HaiBanana",
+        "demo": "https://www.haibanana.com/",
+        "cat": "Web Development",
+        "featured": true,
+        "preview": "haibanana"
+      },
+      {
         "title": "Desa Wisata Alamendeah Website",
         "description": "Developed an informational and promotional website for Desa Wisata Alamedah to enhance its online presence and support tourism. The platform provides detailed information about tourist attractions, local culture, accommodations, and events, designed to improve visitor engagement and accessibility. Built with modern web technologies ensuring responsive design and user-friendly navigation.",
         "image": "dawala.png",
@@ -400,7 +431,7 @@
         "technologies": ["CNN-LSTM Model", "Tensorflow", "Deep Learning", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "PyFlask", "HTML", "CSS", "Librosa"],
         "github": "https://github.com/alghifrz/Indonesian-Accent-Classification",
         "demo": "",
-        "cat": "Machine Learning",
+        "cat": "Artificial Intelligence",
         "featured": true,
         "preview": "MFCC"
       },
