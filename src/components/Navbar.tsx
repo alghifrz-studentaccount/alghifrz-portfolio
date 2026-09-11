@@ -419,100 +419,80 @@ const Navbar = () =>  {
   
     return (
         <>
-            <nav className="bg-black/50 text-white shadow-md fixed w-full z-50 backdrop-blur-xl py-2">
-                <div className="max-w-7xl mx-auto px-4 md:px-6 py-1 md:py-1 flex justify-between items-center">
-                    <div className="text-md md:text-xl font-bold">
-                        <Link href="/">
-                            <div className='flex items-center gap-2'>
-                                <Image 
-                                    src={activeSection === 'home' || activeSection === 'contact' ? "/logo.png" : "/logoW.png"} 
-                                    alt="logo" 
-                                    width={40} 
-                                    height={40} 
-                                />
-                                {navbar.logo.text}
-                                <span className="text-blue-400">{navbar.logo.highlight}</span>        
-                            </div>
-                        </Link>
-                    </div>
+            <nav className="fixed top-4 left-0 right-0 z-50 px-3 md:px-6">
+                <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 rounded-full border border-white/10 bg-[#111]/80 px-3 py-2 shadow-[0_12px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl md:px-4">
+                    <Link href="/" className="flex min-w-0 items-center gap-2 pl-1">
+                        <Image src="/logoW.png" alt="logo" width={28} height={28} />
+                        <span className="truncate text-sm font-semibold text-white md:text-base">
+                            Alghif Rz
+                            <span className="text-[var(--accent)]">{navbar.logo.highlight}</span>
+                        </span>
+                    </Link>
 
-                    <div className="md:hidden">
-                        <button 
-                            onClick={toggleMenu}
-                            className="p-2 hover:bg-white/10 rounded-lg transition-colors"
-                        >
-                            {isOpen ? <FiX size={20} /> : <FiMenu size={20} />}
-                        </button>
-                    </div>
-
-                    <ul className="hidden md:flex space-x-8 font-medium">
+                    <ul className="hidden items-center gap-1 lg:flex">
                         {navbar.menuItems.map((item) => (
-                            <li key={`desktop-${item.href}`} className="relative">
-                                <button 
+                            <li key={`desktop-${item.href}`}>
+                                <button
                                     onClick={() => handleNavigation(item)}
-                                    className={`relative py-2 px-1 ${
-                                        isActive(item.href) 
-                                            ? 'text-blue-400' 
-                                            : 'text-gray-300 hover:text-white'
-                                    } transition-colors duration-300 cursor-pointer`}
+                                    className={`relative cursor-pointer rounded-full px-3 py-1.5 text-sm transition-colors ${
+                                        isActive(item.href)
+                                            ? "text-white"
+                                            : "text-zinc-400 hover:text-white"
+                                    }`}
                                 >
                                     {item.name}
-                                    <AnimatePresence>
-                                        {isActive(item.href) && (
-                                            <motion.div
-                                                layoutId="navbar-indicator"
-                                                className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-400"
-                                                initial={{ opacity: 0 }}
-                                                animate={{ opacity: 1 }}
-                                                exit={{ opacity: 0 }}
-                                                transition={{ 
-                                                    // type: "tween",
-                                                    // duration: 0.3,
-                                                    // ease: "easeInOut"
-                                                }}
-                                            />
-                                        )}
-                                    </AnimatePresence>
+                                    {isActive(item.href) && (
+                                        <motion.span
+                                            layoutId="navbar-indicator"
+                                            className="absolute inset-x-2 -bottom-0.5 h-px bg-[var(--accent)]"
+                                        />
+                                    )}
                                 </button>
                             </li>
                         ))}
                     </ul>
+
+                    <div className="flex items-center gap-2">
+                        <button
+                            onClick={() => handleNavigation({ name: "Contact", href: "/#contact" })}
+                            className="hidden rounded-full bg-white px-4 py-2 text-sm font-semibold text-black md:inline-flex"
+                        >
+                            Get in touch
+                        </button>
+                        <button
+                            onClick={toggleMenu}
+                            className="rounded-full p-2 text-white hover:bg-white/10 lg:hidden"
+                            aria-label="Toggle menu"
+                        >
+                            {isOpen ? <FiX size={18} /> : <FiMenu size={18} />}
+                        </button>
+                    </div>
                 </div>
 
-                {/* Mobile menu */}
                 <AnimatePresence>
                     {isOpen && (
-                        <motion.div 
-                            className="md:hidden"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
+                        <motion.div
+                            className="mx-auto mt-3 max-w-5xl overflow-hidden rounded-2xl border border-white/10 bg-[#111]/95 backdrop-blur-xl lg:hidden"
+                            initial={{ opacity: 0, y: -8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -8 }}
                         >
-                            <div className="px-4 py-2 bg-black/80 backdrop-blur-xl">
-                                <ul className="space-y-2">
-                                    {navbar.menuItems.map((item) => (
-                                        <motion.li 
-                                            key={`mobile-${item.href}`}
-                                            initial={{ opacity: 0, x: -20 }}
-                                            animate={{ opacity: 1, x: 0 }}
-                                            exit={{ opacity: 0, x: -20 }}
-                                            transition={{ duration: 0.2 }}
+                            <ul className="p-3">
+                                {navbar.menuItems.map((item) => (
+                                    <li key={`mobile-${item.href}`}>
+                                        <button
+                                            onClick={() => handleNavigation(item)}
+                                            className={`w-full rounded-xl px-4 py-3 text-left text-sm ${
+                                                isActive(item.href)
+                                                    ? "bg-white/8 text-white"
+                                                    : "text-zinc-400 hover:bg-white/5 hover:text-white"
+                                            }`}
                                         >
-                                            <button 
-                                                onClick={() => handleNavigation(item)}
-                                                className={`w-full text-left py-3 px-4 rounded-lg ${
-                                                    isActive(item.href) 
-                                                        ? 'bg-blue-400/20 text-blue-400' 
-                                                        : 'text-gray-300 hover:bg-white/10 hover:text-white'
-                                                } transition-all duration-300`}
-                                            >
-                                                {item.name}
-                                            </button>
-                                        </motion.li>
-                                    ))}
-                                </ul>
-                            </div>
+                                            {item.name}
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
                         </motion.div>
                     )}
                 </AnimatePresence>

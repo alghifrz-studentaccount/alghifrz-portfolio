@@ -1,160 +1,173 @@
-import content from '@/data/content.json';
-import Image from 'next/image';
-import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import content from "@/data/content.json";
+import Image from "next/image";
+import { useCallback, useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+
+const photos = Array.from({ length: 18 }, (_, i) => `/me${i + 1}.jpg`);
+
+const highlights = [
+  { label: "GPA", value: "3.92", hint: "/ 4.00" },
+  { label: "Projects", value: `${content.projects.featured.length}+`, hint: "" },
+  { label: "Focus", value: "AI & SE", hint: "" },
+];
 
 const Profile = () => {
-  const photos = Array.from({ length: 17 }, (_, i) => `/me${i + 1}.jpg`);
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
 
-  const nextPhoto = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % photos.length);
-  }, [photos.length]);
+  const goTo = useCallback((index: number, dir: number) => {
+    setDirection(dir);
+    setCurrent((index + photos.length) % photos.length);
+  }, []);
 
-  const prevPhoto = () => {
-    setCurrent((prev) => (prev - 1 + photos.length) % photos.length);
-  };
+  const nextPhoto = useCallback(() => goTo(current + 1, 1), [current, goTo]);
+  const prevPhoto = useCallback(() => goTo(current - 1, -1), [current, goTo]);
 
-  // Auto scroll setiap 5 detik
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextPhoto();
-    }, 5000);
-
+    const interval = setInterval(nextPhoto, 5000);
     return () => clearInterval(interval);
   }, [nextPhoto]);
 
   return (
-    <section id="profile" className="relative py-4 md:py-24 z-10 max-w-7xl mx-auto flex flex-col md:flex-row md:items-start items-center gap-0 md:gap-16 md:py-28">
-      {/* Decorative blurred circles */}
-      <div className="relative py-4 z-10 max-w-7xl md:mx-auto flex flex-col md:flex-row md:items-start items-center gap-0 md:gap-16">
-        {/* Foto Slider */}
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+    <section id="profile" className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
+      <div className="grid items-center gap-12 md:grid-cols-[0.95fr_1.05fr] md:gap-16">
+        <motion.div
+          initial={{ opacity: 0, x: -28, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
-          className="order-2 md:order-1 w-full md:w-1/2 flex flex-col items-center"
+          className="relative"
         >
-          <div className="flex gap-2 md:gap-4 items-center justify-center w-full">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={prevPhoto}
-              className="flex bg-blue-400/30 hover:bg-gradient-to-r from-blue-400 to-purple-600 text-lg md:text-xl rounded-full p-1 md:p-1.5 transition-all"
-            >
-              &lt;
-            </motion.button>
+          <div className="pointer-events-none absolute -left-6 top-10 hidden h-40 w-40 rounded-full bg-[var(--accent)]/20 blur-3xl md:block" />
+          <div className="pointer-events-none absolute -right-4 bottom-16 hidden h-28 w-28 rounded-full bg-white/10 blur-2xl md:block" />
 
-            <div className="relative w-[300px] h-[190px] md:w-[500px] md:h-[350px] flex flex-col items-center justify-center mt-8 md:mt-0">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={current}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 1.05 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute w-full h-full"
-                >
-                  <Image
-                    src={photos[current]}
-                    alt={`Photo ${current + 1}`}
-                    fill
-                    className="shadow-xl object-cover rounded-lg md:rounded-xl transition-all duration-300"
-                    sizes="(max-width: 768px) 280px, (max-width: 1200px) 500px, 33vw"
-                    priority
-                  />
-                </motion.div>
-              </AnimatePresence>
+          <div className="relative">
+            <div className="absolute -left-3 top-8 hidden h-[70%] w-full rotate-[-4deg] rounded-[1.6rem] border border-white/10 bg-white/5 md:block" />
+            <div className="absolute -right-2 top-4 hidden h-[75%] w-full rotate-[3deg] rounded-[1.6rem] border border-white/8 bg-[#151515] md:block" />
+
+            <div className="relative overflow-hidden rounded-[1.6rem] border border-white/12 bg-[#111] p-2 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.25rem] md:aspect-[5/6]">
+                <AnimatePresence mode="wait" custom={direction}>
+                  <motion.div
+                    key={current}
+                    custom={direction}
+                    initial={{ opacity: 0, scale: 1.04, x: direction * 36 }}
+                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                    exit={{ opacity: 0, scale: 0.98, x: direction * -36 }}
+                    transition={{ duration: 0.45, ease: "easeOut" }}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src={photos[current]}
+                      alt={`Profile photo ${current + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 45vw"
+                      priority
+                    />
+                  </motion.div>
+                </AnimatePresence>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,85,212,0.18),transparent_45%)]" />
+
+                <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/40 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-zinc-200 backdrop-blur-md">
+                  Portrait
+                </div>
+
+                <div className="absolute inset-x-4 bottom-4 flex items-center justify-between">
+                  <div className="flex gap-2">
+                    <button
+                      onClick={prevPhoto}
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-black/45 text-white backdrop-blur-md transition hover:bg-black/65"
+                      aria-label="Previous photo"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      onClick={nextPhoto}
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-black/45 text-white backdrop-blur-md transition hover:bg-black/65"
+                      aria-label="Next photo"
+                    >
+                      ›
+                    </button>
+                  </div>
+                  <span className="rounded-full border border-white/15 bg-black/45 px-3 py-1 text-xs text-white backdrop-blur-md">
+                    {String(current + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}
+                  </span>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={nextPhoto}
-              className="flex bg-blue-400/30 hover:bg-gradient-to-r from-blue-400 to-purple-600 text-lg md:text-xl rounded-full p-1 md:p-1.5 transition-all"
-            >
-              &gt;
-            </motion.button>
+          <div className="mt-4 h-[3px] overflow-hidden rounded-full bg-white/10">
+            <motion.div
+              key={current}
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 5, ease: "linear" }}
+              className="h-full bg-[var(--accent)]"
+            />
+          </div>
+
+          <div className="mt-4 flex gap-1.5 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {photos.slice(0, 8).map((photo, index) => (
+              <button
+                key={photo}
+                type="button"
+                onClick={() => goTo(index, index > current ? 1 : -1)}
+                className={`relative h-12 w-10 shrink-0 overflow-hidden rounded-lg border transition ${
+                  current === index ? "border-[var(--accent)] opacity-100" : "border-white/10 opacity-50 hover:opacity-80"
+                }`}
+                aria-label={`Go to photo ${index + 1}`}
+              >
+                <Image src={photo} alt="" fill className="object-cover" sizes="40px" />
+              </button>
+            ))}
           </div>
         </motion.div>
-        {/* Teks */}
-        <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="order-1 md:order-2 w-full md:w-1/2 text-center md:text-left md:items-start mt-3 md:mt-0 px-3 md:px-0"
+
+        <motion.div
+          initial={{ opacity: 0, x: 28, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 font-bold mb-2 md:mb-3 pb-2 md:pb-4 border-b border-white"
-          >
-            {content.about.about}
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xs md:text-base leading-relaxed"
-          >
+          <p className="nf-eyebrow mb-3">Profile</p>
+          <h2 className="font-display text-3xl leading-[1.1] text-white md:text-5xl lg:text-6xl">
+            Built to ship AI that holds up in production
+          </h2>
+          <p className="mt-6 max-w-xl text-sm leading-relaxed text-[var(--muted)] md:text-base">
             {content.about.detail}
-          </motion.p>
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-8 border-y border-white/10 py-6">
+            {highlights.map((item, index) => (
+              <div key={item.label} className="min-w-[6.5rem]">
+                <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--muted)]">{item.label}</p>
+                <p className="mt-2 font-display text-4xl text-white md:text-5xl">
+                  {item.value}
+                  <span className="ml-1 text-lg text-zinc-500 md:text-xl">{item.hint}</span>
+                </p>
+                {index < highlights.length - 1 && (
+                  <span className="sr-only">,</span>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link href="/#experience" className="nf-btn-primary">
+              See experience
+            </Link>
+            <Link href="/#projects" className="nf-btn-secondary">
+              Browse work
+            </Link>
+          </div>
         </motion.div>
-      </div>
-
-      {/* Decorative wave transition */}
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        className="absolute bottom-0 left-0 w-full overflow-hidden leading-none"
-      >
-        <svg
-          className="relative block w-full h-[40px] md:h-[80px]"
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            className="fill-black"
-          ></path>
-        </svg>
-      </motion.div>
-
-      {/* Floating particles */}
-      <div className="absolute bottom-0 left-0 w-full h-[40px] md:h-[80px] overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ 
-              duration: 0.5,
-              delay: i * 0.1,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }}
-            className="absolute w-1 md:w-1.5 h-1 md:h-1.5 bg-blue-400/30 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              bottom: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 7}s`
-            }}
-          />
-        ))}
       </div>
     </section>
   );
 };
 
-export default Profile; 
+export default Profile;

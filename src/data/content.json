@@ -18,7 +18,7 @@
         "href": "/#experience"
       },
       {
-        "name": "Activities & Skills",
+        "name": "Activities",
         "href": "/#activities"
       },
       {
@@ -105,8 +105,8 @@
         "skill": ["React.js", "JavaScript", "TypeScript", "TailwindCSS", "Next.js", "Golang", "RESTful API Development", "Frontend Development", "Backend Development"]
       },
       {
-        "title": "Tech Project Support Intern",
-        "company": "PT Paragon Corp",
+        "title": "Tech Project Support",
+        "company": "PT Paragon Technology and Innovation",
         "date": "Aug 2025 - Dec 2025",
         "description": [
           "Developed a real-time dashboard to monitor agent performance and visualize key metrics.",
@@ -118,7 +118,7 @@
         "skill": ["Microsoft Power BI", "Microsoft Excel", "Google Looker Studio", "Google Sheets", "Relational Data Modelling", "Data Visualization", "Data Science", "Fullstack Development", "Web Development", "Artificial Intelligence (AI)", "RAG"]
       },
       {
-        "title": "Risk Management Analyst Intern",
+        "title": "Data Analyst & Visualization",
         "company": "PT Pertamina (Persero)",
         "date": "Feb 2025 - Mar 2025",
         "description": [
@@ -127,18 +127,6 @@
           "Reports to support management decisions, and provide risk mitigation recommendations."
         ],
         "skill": ["Microsoft Power BI", "Microsoft Excel", "Relational Data Modelling", "Data Visualization", "Data Science"]
-      },
-      {
-        "title": "Data Structure and Algorithm Practicum Assistant",
-        "company": "Pertamina University",
-        "date": "Oct 2024 - Feb 2025",
-        "description": [
-          "Assisted lecturers in conducting practicum sessions focused on data structure concepts and algorithms using C++, such as linked lists, stacks, queues, etc.",
-          "Guided students through practicum assignments and provided feedback to improve their code quality.",
-          "Developed and tested practicum modules to ensure alignment with the course curriculum.",
-          "Evaluated students practicum results and provided constructive feedback to enhance their programming skills."
-        ],
-        "skill": ["C++ Programming", "Algorithms", "Data Structures"]
       },
       {
         "title": "Software Desktop Developer",
@@ -178,7 +166,7 @@
       {
         "name": "HMIK UP | Computer Science Student Association",
         "role": "Head of Technology and Education Department",
-        "date": "Jan 2025 - Present"
+        "date": "Jan 2025 - Jan 2026"
       },
       {
         "name": "CITE UP 2024 | Computer Science National Event & Competition",
@@ -198,7 +186,7 @@
       {
         "name": "Pertamina University",
         "degree": "Undergraduate Computer Science, GPA 3.91/4.00",
-        "date": "Sep 2022 - Present",
+        "date": "Sep 2022 - Aug 2026",
         "logo": "/LogoUPk.png"
       },
       {
