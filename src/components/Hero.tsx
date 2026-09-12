@@ -140,7 +140,6 @@ const Hero = () => {
           </motion.a>
           <motion.a
             href={hero.buttons.portfolio.link}
-            target="_blank"
             rel="noopener noreferrer"
             className="nf-btn-secondary"
             whileHover={{ scale: 1.04 }}
@@ -180,7 +179,7 @@ const Hero = () => {
 
       <motion.div
         style={{ y: mockY, scale: mockScale, opacity: mockOpacity }}
-        className="relative z-10 mx-auto mt-10 max-w-6xl px-4 md:mt-18 mb-10 [perspective:1200px] z-100"
+        className="relative mx-auto mt-10 max-w-6xl px-4 md:mt-18 mb-10 [perspective:1200px] z-50"
       >
         <motion.div
           onMouseMove={onMove}

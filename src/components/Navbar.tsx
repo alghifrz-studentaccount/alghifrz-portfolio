@@ -339,7 +339,7 @@ const Navbar = () =>  {
                 // Normal navigation within the home page
                 const element = document.getElementById(sectionId);
                 if (element) {
-                    const headerOffset = 80;
+                    const headerOffset = 40;
                     const elementPosition = element.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -419,7 +419,7 @@ const Navbar = () =>  {
   
     return (
         <>
-            <nav className="fixed top-4 left-0 right-0 z-50 px-3 md:px-6">
+            <nav className="fixed top-4 left-0 right-0 px-3 md:px-6 z-200">
                 <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 rounded-full border border-white/10 bg-[#111]/80 px-3 py-2 shadow-[0_12px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl md:px-4">
                     <Link href="/" className="flex min-w-0 items-center gap-2 pl-1">
                         <Image src="/logoW.png" alt="logo" width={28} height={28} />
