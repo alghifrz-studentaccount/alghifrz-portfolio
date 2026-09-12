@@ -292,6 +292,17 @@
     "subtitle": "A showcase of my best work and technical expertise",
     "featured": [
       {
+        "title": "DIUK Solution - AI-Orchestrated Conversational Automation Platform",
+        "description": "an AI-driven conversational automation platform with an event-based architecture, enabling users to upload business data and define custom AI prompts. The system integrates workflow automation (n8n), centralized data storage, and WhatsApp communication channels to support end-to-end business processes such as broadcasting, transactions, and customer service.",
+        "image": "diuk.png",
+        "technologies": ["Next.js", "PostgreSQL", "TypeScript", "TailwindCSS", "React.js", "Prisma ORM", "n8n", "Natural Language Processing (NLP)", "LLM"],
+        "github": "",
+        "demo": "https://www.diuksolution.com/",
+        "cat": "Artificial Intelligence",
+        "featured": true,
+        "preview": "diuk"
+      },
+      {
         "title": "RAISE UP - Automated Community Portal",
         "description": "A digital platform for public association where n8n powers an AI WhatsApp chatbot. Answering resident questions, auto-classifying complaints, and sending reminders/broadcasts. Backed by a Next.js + Prisma + Supabase admin and data layer.",
         "image": "raiseup.png",
@@ -323,17 +334,6 @@
         "cat": "Web Development",
         "featured": false,
         "preview": "kasiko"
-      },
-      {
-        "title": "DIUK Solution - AI-Orchestrated Conversational Automation Platform",
-        "description": "an AI-driven conversational automation platform with an event-based architecture, enabling users to upload business data and define custom AI prompts. The system integrates workflow automation (n8n), centralized data storage, and WhatsApp communication channels to support end-to-end business processes such as broadcasting, transactions, and customer service.",
-        "image": "diuk.png",
-        "technologies": ["Next.js", "PostgreSQL", "TypeScript", "TailwindCSS", "React.js", "Prisma ORM", "n8n", "Natural Language Processing (NLP)", "WAHA", "LLM"],
-        "github": "",
-        "demo": "https://www.diuksolution.com/",
-        "cat": "Artificial Intelligence",
-        "featured": true,
-        "preview": "diuk"
       },
       {
         "title": "Crystallure Chatbot Assistant",
