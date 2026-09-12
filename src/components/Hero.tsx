@@ -17,15 +17,26 @@ const Hero = () => {
     offset: ["start start", "end start"],
   });
 
-  const mockY = useTransform(scrollYProgress, [0, 1], [0, 140]);
-  const mockScale = useTransform(scrollYProgress, [0, 1], [1, 0.88]);
-  const mockOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.35]);
-  const titleY = useTransform(scrollYProgress, [0, 1], [0, -40]);
+  const mockY = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  // Smaller at rest, grow into focus as it flattens on scroll.
+  const mockScale = useTransform(scrollYProgress, [0, 0.22], [0.86, 1]);
+  const mockOpacity = useTransform(scrollYProgress, [0, 0.85], [1, 0.9]);
+  // Intro stays put and fades so attention moves to the mock below.
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.18], [1, 0]);
+  const titlePointer = useTransform(scrollYProgress, (value) =>
+    value > 0.14 ? "none" : "auto"
+  );
+  // Mild tip at rest; flat while still inside the hero (not after leaving it).
+  const baseRotateX = useTransform(scrollYProgress, [0, 0.22], [8, 0]);
 
   const rotateX = useMotionValue(0);
   const rotateY = useMotionValue(0);
   const smoothX = useSpring(rotateX, { stiffness: 180, damping: 20 });
   const smoothY = useSpring(rotateY, { stiffness: 180, damping: 20 });
+  const combinedRotateX = useTransform(
+    [baseRotateX, smoothX],
+    ([base, mouse]) => Number(base) + Number(mouse)
+  );
 
   const onMove = (event: MouseEvent<HTMLDivElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -44,22 +55,41 @@ const Hero = () => {
     <section
       ref={sectionRef}
       id="home"
-      className="relative overflow-hidden pt-28 pb-10 md:pt-36 md:pb-48"
+      className="relative pt-28 pb-10 md:pt-36 md:pb-48"
     >
-      <div className="nf-grid pointer-events-none absolute inset-0 opacity-70" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(98,186,245,0.12),transparent_46%)]" />
-      <motion.div
-        className="pointer-events-none absolute left-1/2 top-24 h-64 w-64 -translate-x-1/2 rounded-full bg-[var(--accent)]/20 blur-[90px]"
-        animate={{ opacity: [0.25, 0.5, 0.25], scale: [0.9, 1.08, 0.9] }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-      />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="nf-grid absolute inset-0 opacity-70" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(98,186,245,0.12),transparent_46%)]" />
+        <motion.div
+          className="absolute left-1/2 top-24 h-64 w-64 -translate-x-1/2 rounded-full bg-[var(--accent)]/20 blur-[90px]"
+          animate={{ opacity: [0.25, 0.5, 0.25], scale: [0.9, 1.08, 0.9] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
 
-      <motion.div style={{ y: titleY }} className="relative z-10 mx-auto max-w-4xl px-4 text-center">
+      {/* Keeps document flow while the real intro is pinned to the viewport. */}
+      <div className="pointer-events-none invisible mx-auto max-w-4xl px-4 text-center" aria-hidden>
+        <div className="nf-badge mb-5">AVAILABLE</div>
+        <p className="nf-eyebrow mb-5">AI & AUTOMATION ENGINEER | SOFTWARE ENGINEER</p>
+        <h1 className="font-display text-4xl leading-[1.05] sm:text-5xl md:text-7xl">
+          Alghifari Rasyid Zola
+        </h1>
+        <p className="mx-auto mt-5 max-w-2xl text-sm md:text-lg">
+          {hero.description} <br /> I build AI workflows, automation, and software that actually ship.
+        </p>
+        <div className="mt-8 h-11" />
+        <div className="mt-6 h-10" />
+      </div>
+
+      <motion.div
+        style={{ opacity: titleOpacity, pointerEvents: titlePointer }}
+        className="fixed inset-x-0 top-[max(5.5rem,12vh)] z-20 mx-auto max-w-4xl px-4 text-center md:top-[max(6.5rem,14vh)]"
+      >
         <motion.div
           initial={{ opacity: 0, y: 16, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.7 }}
-          className="nf-badge mb-5"
+          className="nf-badge mb-5 inline-flex"
         >
           <span className="nf-badge-dot" />
           AVAILABLE
@@ -150,18 +180,23 @@ const Hero = () => {
 
       <motion.div
         style={{ y: mockY, scale: mockScale, opacity: mockOpacity }}
-        className="relative z-10 mx-auto mt-10 max-w-6xl px-4 md:mt-14 mb-10"
+        className="relative z-10 mx-auto mt-10 max-w-6xl px-4 md:mt-18 mb-10 [perspective:1200px] z-100"
       >
         <motion.div
           onMouseMove={onMove}
           onMouseLeave={onLeave}
-          style={{ rotateX: smoothX, rotateY: smoothY, transformPerspective: 1200 }}
+          style={{
+            rotateX: combinedRotateX,
+            rotateY: smoothY,
+            transformPerspective: 1200,
+            transformOrigin: "center top",
+          }}
           initial={{ opacity: 0, y: 48 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.38 }}
-          className="overflow-hidden rounded-[1.4rem] border border-white/10 bg-[#111] shadow-[0_40px_120px_rgba(0,0,0,0.55)]"
+          className="overflow-hidden rounded-[1.4rem] border border-white/10 bg-transparent shadow-[0_40px_120px_rgba(0,0,0,0.55)] will-change-transform"
         >
-          <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
+          <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3 bg-[#111]">
             <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
