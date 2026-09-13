@@ -293,9 +293,9 @@
     "featured": [
       {
         "title": "DIUK Solution - AI-Orchestrated Conversational Automation Platform",
-        "description": "an AI-driven conversational automation platform with an event-based architecture, enabling users to upload business data and define custom AI prompts. The system integrates workflow automation (n8n), centralized data storage, and WhatsApp communication channels to support end-to-end business processes such as broadcasting, transactions, and customer service.",
+        "description": "An AI-powered conversational commerce platform that turns WhatsApp conversations into bookings, sales, and lasting customer relationships. Businesses can connect WhatsApp Business Cloud, configure custom AI prompts, and automate customer service and reservation workflows end-to-end. It includes a live inbox, CRM, appointment scheduling, AI-powered booking orchestration, and industry-specific workspaces for clinics, salons, and F&B businesses.",
         "image": "diuk.png",
-        "technologies": ["Next.js", "PostgreSQL", "TypeScript", "TailwindCSS", "React.js", "Prisma ORM", "n8n", "Natural Language Processing (NLP)", "LLM"],
+        "technologies": ["Next.js", "Supabase", "FramerMotion", "PostgreSQL", "TypeScript", "TailwindCSS", "React.js", "Prisma ORM", "n8n", "LLM Provider", "Meta"],
         "github": "",
         "demo": "https://www.diuksolution.com/",
         "cat": "Artificial Intelligence",
